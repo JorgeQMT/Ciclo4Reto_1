@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Reto Uno</title>
+  </head>
+  
+  <body style="background: url(img/fondo.jpg);">
+    
+    <!-- Barra Navegacion-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#login">
+        <img class="img-fluid mx-auto d-block rounded"src="img/logoB.jpeg"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#login">Inicio<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#user">Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#welcome">Bienvenido</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+            <span class="nombreUsuario">Bienvenido</span>
+        </span>
+      </div>
+    </nav>
+    <!-- fin Barra Navegacion 
+
+      <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="width: 100%; height: 400px;">
+            <img src="img/beauty6.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" style="width: 100%; height: 400px;">
+            <img src="img/beauty7.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" style="width: 100%; height: 400px;">
+            <img src="img/beauty3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        // control next y prev 
+        <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+      </div> -->
+    
+  <!-- formulario iniciar session -->
+    <section id="login">
+      <div class="contact-wrapper">
+          <main role="main" class="container my-auto" style="background-color: #ffff; border: 0ch;">
+            <div class="container">
+              <div id="login-row"class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-12">
+                  <div id="login-box" class="col-md-12">
+                    <form id="login-form" class="form" action="" method="post">
+                      <h3 class="text-center text-info">Iniciar Sesion</h3>
+                      <div class="form-group">
+                        <label for="loginEmail" class="text-info">Correo:</label><br />
+                        <input type="email" name="loginEmail" id="loginEmail" class="form-control" required/>
+                      </div>
+                      <div class="form-group">
+                        <label for="loginPassword" class="text-info">Contraseña:</label><br/>
+                        <input type="password" name="loginPassword" id="loginPassword" class="form-control" required/>
+                      </div>
+                      <div class="form-group text-center">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="loginUser()">Ingresar</button>
+                      </div>
+                      <div class="form-group text-center">
+                        <label for="remember-me" class="text-info">
+                          <span>No tienes una cuenta? <a href="#user" class="text-info">Crea tu cuenta aqui</a></span>
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+      </div>
+    </section> 
+    <!-- fin formulario iniciar session-->
+
+    <!-- inicio formulario crear usuario-->
+    <section id="user">
+      <div class="contact-wrapper">
+        <main role="main" class="container my-auto" style="background-color: #ffff; border: 0ch;">
+          <div class="container">
+            <div id="login-row"class="row justify-content-center align-items-center">
+              <div id="login-column" class="col-md-12">
+                <div id="login-box" class="col-md-12">
+                  <form id="login-formUser" class="form" action="" method="post">
+                    <h3 class="text-center text-info">Crear Cuenta</h3>
+                    <div class="form-group">
+                      <label for="userName" class="text-info">Nombre:</label><br />
+                      <input type="text" name="userName" id="userName" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                      <label for="userEmail" class="text-info">Correo:</label><br />
+                      <input type="email" name="userEmail" id="userEmail" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                      <label for="userPassword" class="text-info">Contraseña:</label><br/>
+                      <input type="password" name="userPassword" id="userPassword" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                      <label for="userPasswordC" class="text-info">Confirmar Contraseña:</label><br/>
+                      <input type="password" name="userPasswordC" id="userPasswordC" class="form-control" required/>
+                    </div>
+                    <div class="form-group text-center">
+                      <button id="agregar" type="button" class="btn btn-primary btn-lg btn-block" onclick="saveUser()">Agregar</button>
+                    </div>
+                    <div class="form-group text-center">
+                      <label for="remember-me" class="text-info">
+                        <span>Ya tienes una cuenta? <a href="#login" class="text-info">Inicia sesion aqui!</a></span>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section> 
+    <!-- fin formulario crear usuario-->
+    <!-- Bienvenida -->
+    <section id="welcome">
+      <div class="contact-wrapper">
+          <main role="main" class="container my-auto" style="background-color: #ffff; border: 0ch;">
+              <div class="container">
+                  <div id="login" class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-12">
+                      <h2 class="text-center">Bienvenid@</h2>
+                      <img class="img-fluid mx-auto d-block rounded"src="img/logo2.png"/>
+                          <div class="contact-info">
+                              <h3>Usuario</h3>
+                                <div class="nombreUsuario">
+                              </div>
+                          </div>
+                  </div>
+              </div>
+          </main>
+      </div>
+    </section> 
+    <!-- fin bienvenido-->
+    <!-- Pie de Pagina-->
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:<a class="text-dark" href="">Creado por Jorge Q.</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!--Fin  Pie de Pagina-->
+
+    <!-- Optional JavaScript -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  </body>
+</html>
